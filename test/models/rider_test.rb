@@ -14,4 +14,9 @@ class RiderTest < ActiveSupport::TestCase
     assert_equal('Aegon brings Blackfyre crashing down!', aegon.swing)
   end
 
+  def test_rider_email
+    danny = create(:rider, name: "Daenerys")
+    assert_equal("daenerys@westeros.com", danny.email)
+  end
+  
 end
